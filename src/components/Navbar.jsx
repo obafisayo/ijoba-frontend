@@ -1,12 +1,13 @@
 import React from 'react'
-import Logo from "../assets/react.svg";
+import ProfilePicture from "../assets/Profile icon.png";
+import textLogo from "../assets/AirisTextLogo.png";
 
 export const Navbar = () => {
   return (
     <nav className='flex justify-between py-4 px-6 border'>
         <div className="logo">
             <figure>
-                <img src={Logo} alt="Logo-icon" />
+                <img src={textLogo} alt="Logo-icon" />
             </figure>
         </div>
         <div className="flex gap-4">
@@ -18,7 +19,7 @@ export const Navbar = () => {
             </ul>
             <div className="avatar">
                 <figure>
-                    <img src="avatar.svg" alt="avatar-icon" />
+                    <img src={ProfilePicture} alt="" />
                 </figure>
             </div>
         </div>
