@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
-import Sidebar from './Sidebar';
-import Dashboard from './Dashboard';
+import Sidebar from '../components/Sidebar';
+import Dashboard from '../components/Dashboard';
 import { SIDEBAR_MAX_WIDTH } from '../helpers/utils';
 const AirisDashboard = () => {
     const [sidebarWidth, setSidebarWidth] = useState(SIDEBAR_MAX_WIDTH);

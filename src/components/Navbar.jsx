@@ -1,6 +1,8 @@
 import React from 'react'
 import ProfilePicture from "../assets/Profile icon.png";
 import textLogo from "../assets/AirisTextLogo.png";
+import { NavLink } from 'react-router-dom';
+import { AIRISDASHBOARD, BUDGET, PROJECTS, REPORTS } from '../routes/Routeconstants';
 
 export const Navbar = () => {
   return (
@@ -13,10 +15,18 @@ export const Navbar = () => {
 
         <div className="flex items-center gap-10">
             <ul className='flex gap-6'>
-                <li className=' hover:text-[#73777f] cursor-pointer '>Dashboard</li>
-                <li className=' hover:text-[#73777f] cursor-pointer '>Projects</li>
-                <li className=' hover:text-[#73777f] cursor-pointer '>Reports</li>
-                <li className=' hover:text-[#73777f] cursor-pointer '>Budget</li>
+                <NavLink to={AIRISDASHBOARD}>
+                    <li className=' hover:text-[#73777f] cursor-pointer '>Dashboard</li>
+                </NavLink>
+                <NavLink to={PROJECTS}>
+                    <li className=' hover:text-[#73777f] cursor-pointer '>Projects</li>
+                </NavLink>
+                <NavLink to={REPORTS}>
+                    <li className=' hover:text-[#73777f] cursor-pointer '>Reports</li>
+                </NavLink>
+                <NavLink to={BUDGET}>
+                    <li className=' hover:text-[#73777f] cursor-pointer '>Budget</li>
+                </NavLink>
             </ul>
             <div className="avatar cursor-pointer">
                 <figure>

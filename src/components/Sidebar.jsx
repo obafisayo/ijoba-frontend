@@ -69,7 +69,7 @@ const Sidebar = ({
 		>
 			<div
 				style={{
-					padding: "20px 16px",
+					padding: "20px 4px",
 					borderBottom: "1px solid #2d3748",
 					fontWeight: 700,
 					fontSize: 18,
@@ -84,8 +84,8 @@ const Sidebar = ({
 				title="Toggle sidebar"
 			>
 				{sidebarWidth === SIDEBAR_MIN_WIDTH ? (
-					<figure className="border w-14 ">
-						<img src={Logo} alt="logo-icon" />
+					<figure className="w-12 h-12">
+						<img className="" src={Logo} alt="logo-icon" />
 					</figure>
 				) : (
 					<figure className="">
