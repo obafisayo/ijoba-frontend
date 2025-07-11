@@ -9,6 +9,8 @@ import {
 	// LS_ALL_MESSAGES,
 	// LS_CURRENT_CHAT_ID
 } from "../helpers/utils.js";
+import TextLogo from "../assets/AirisTextLogo.png"
+import Logo from "../assets/AirisLogo.svg"
 
 const Sidebar = ({
 	sidebarWidth,
@@ -82,12 +84,13 @@ const Sidebar = ({
 				title="Toggle sidebar"
 			>
 				{sidebarWidth === SIDEBAR_MIN_WIDTH ? (
-					<svg width="24" height="24" fill="none" stroke="#fff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24">
-						<circle cx="12" cy="12" r="10" />
-						<polyline points="12 6 12 12 16 14" />
-					</svg>
+					<figure className="border w-14 ">
+						<img src={Logo} alt="logo-icon" />
+					</figure>
 				) : (
-					"History"
+					<figure className="">
+						<img src={TextLogo} alt="text-logo-icon" />
+					</figure>
 				)}
 			</div>
 
