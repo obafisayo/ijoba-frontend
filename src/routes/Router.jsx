@@ -1,7 +1,7 @@
 import React from 'react';
 import { useRoutes } from "react-router-dom"
 import { AdminLayout } from "../layout/AdminLayout"
-import { AIRISDASHBOARD, HOME, PROJECTDETAILS, PROJECTS, BUDGET, SIGNIN, SIGNUP, ABOUT, CONTACT, FEATURE } from "./Routeconstants"
+import { AIRISDASHBOARD, HOME, PROJECTDETAILS, PROJECTS, BUDGET, SIGNIN, SIGNUP, ABOUT, CONTACT, FEATURE, REPORTS } from "./Routeconstants"
 import AirisDashboard from '../pages/AirisDashboard';
 import { AdminDashboardLayout } from '../layout/AdminDashboardLayour';
 import Projects from '../pages/Projects';

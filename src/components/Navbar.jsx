@@ -13,7 +13,6 @@ import {
   REPORTS,
   SIGNUP,
 } from "../routes/Routeconstants";
-import AiRISAPIClient from "../api/api";
 
 export const Navbar = () => {
   const loginStatus = AiRISAPIClient.auth.isLoggedIn();
@@ -46,11 +45,11 @@ export const Navbar = () => {
               <li className=" hover:text-[#73777f] cursor-pointer ">Budget</li>
             </NavLink>
           </ul>
-          <div className="avatar cursor-pointer">
+          <NavLink to={SIGNUP} className="avatar cursor-pointer">
             <figure>
               <img src={ProfilePicture} alt="" />
             </figure>
-          </div>
+          </NavLink>
         </div>
       ) : (
         <div className="flex items-center gap-10">

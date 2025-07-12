@@ -8,7 +8,7 @@ const AirisDashboard = () => {
   const [isResizing, setIsResizing] = useState(false);
 
   return (
-    <div className="flex h-screen w-screen overflow-hidden">
+    <div className="flex pb-8 h-screen w-screen overflow-hidden">
       {/* Fixed Sidebar */}
       <div 
         className="fixed left-0 top-0 h-full z-10"
