@@ -35,8 +35,8 @@ const Dashboard = () => {
         background: "#fff",
       }}
     >
-      <div className="flex flex-col py-4 bg-white">
-        <h1 className="px-8 font-bold text-black text-4xl h-14 flex items-center w-full">
+      <div className="layout-content-container ml-10 mt-10 flex flex-col max-w-[960px] flex-1">
+        <h1 className="flex flex-wrap justify-between gap-3 p-4 text-[#111818] tracking-light text-[32px] font-bold leading-tight min-w-72">
           Admin Dashboard
         </h1>
         <div className="flex justify-evenly py-8 px-4">
@@ -48,7 +48,7 @@ const Dashboard = () => {
             </div>
           ))}
         </div>
-		<h3 className="px-8 py-2 font-bold text-black text-2xl flex items-center w-full">
+		<h3 className="px-4 py-2 font-bold text-black text-2xl flex items-center w-full">
           Recent Projects
         </h3>
 		<ProjectTable />
