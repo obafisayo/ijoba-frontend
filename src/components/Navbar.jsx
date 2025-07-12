@@ -13,6 +13,7 @@ import {
   REPORTS,
   SIGNUP,
 } from "../routes/Routeconstants";
+import AiRISAPIClient from "../api/api";
 
 export const Navbar = () => {
   const loginStatus = AiRISAPIClient.auth.isLoggedIn();
