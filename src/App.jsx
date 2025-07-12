@@ -1,9 +1,13 @@
 import React from 'react'
 import { Router } from './routes/Router';
+import ScrollToTop from './components/ScrollToTop';
 
 const App = () => {
   return (
-    <Router />
+    <>
+      <ScrollToTop />
+      <Router />
+    </>
   )
 }
 
