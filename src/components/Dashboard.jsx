@@ -31,7 +31,7 @@ const Dashboard = () => {
         display: "flex",
         flexDirection: "column",
         height: "100vh",
-        width: "100vw",
+        // width: "100vw",
         background: "#fff",
       }}
     >

@@ -3,11 +3,6 @@ import { useRef, useEffect } from "react";
 import {
   SIDEBAR_MIN_WIDTH,
   SIDEBAR_MAX_WIDTH,
-  // loadFromLS,
-  // saveToLS,
-  // LS_CHAT_HISTORY,
-  // LS_ALL_MESSAGES,
-  // LS_CURRENT_CHAT_ID
 } from "../helpers/utils.js";
 import { NavLink } from "react-router-dom";
 import {
@@ -88,6 +83,7 @@ const Sidebar = ({
       ref={sidebarRef}
       style={{
         width: sidebarWidth,
+        height: "100vh",
         minWidth: SIDEBAR_MIN_WIDTH,
         maxWidth: SIDEBAR_MAX_WIDTH,
         background: "#fff",

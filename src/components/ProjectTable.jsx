@@ -1,49 +1,19 @@
-import React from 'react';
+import React from "react";
+import { NavLink } from "react-router-dom";
+import { PROJECTDETAILS, PROJECTS } from "../routes/Routeconstants";
+import { projects } from "../data/projectData";
 
 const ProjectTable = () => {
-  const projects = [
-    {
-      name: "Community Center Renovation",
-      budget: "$2M",
-      status: "In Progress",
-      completion: 60
-    },
-    {
-      name: "Road Repair Project",
-      budget: "$1.5M",
-      status: "Completed",
-      completion: 100
-    },
-    {
-      name: "School Building Upgrade",
-      budget: "$3M",
-      status: "Planning",
-      completion: 20
-    },
-    {
-      name: "Park Development",
-      budget: "$1M",
-      status: "In Progress",
-      completion: 45
-    },
-    {
-      name: "Library Expansion",
-      budget: "$0.8M",
-      status: "Completed",
-      completion: 100
-    }
-  ];
-
   const getStatusBadgeColor = (status) => {
     switch (status) {
-      case 'Completed':
-        return 'bg-green-100 text-green-800';
-      case 'In Progress':
-        return 'bg-blue-100 text-blue-800';
-      case 'Planning':
-        return 'bg-gray-100 text-gray-800';
+      case "Completed":
+        return "bg-green-100 text-green-800";
+      case "In Progress":
+        return "bg-blue-100 text-blue-800";
+      case "Planning":
+        return "bg-gray-100 text-gray-800";
       default:
-        return 'bg-gray-100 text-gray-800';
+        return "bg-gray-100 text-gray-800";
     }
   };
 
@@ -51,7 +21,7 @@ const ProjectTable = () => {
     return (
       <div className="flex items-center gap-3">
         <div className="w-24 bg-gray-200 rounded-full h-2">
-          <div 
+          <div
             className="bg-gray-800 h-2 rounded-full transition-all duration-300"
             style={{ width: `${percentage}%` }}
           ></div>
@@ -87,13 +57,19 @@ const ProjectTable = () => {
             {projects.map((project, index) => (
               <tr key={index} className="hover:bg-gray-50 transition-colors">
                 <td className="px-6 py-4 text-sm font-medium text-gray-900">
-                  {project.name}
+                  <NavLink to={`${PROJECTS}/${project.id}`}>
+                    {project.name}
+                  </NavLink>
                 </td>
                 <td className="px-6 py-4 text-sm text-gray-600">
                   {project.budget}
                 </td>
                 <td className="px-6 py-4">
-                  <span className={`inline-flex px-2 py-1 text-xs font-medium rounded-full ${getStatusBadgeColor(project.status)}`}>
+                  <span
+                    className={`inline-flex px-2 py-1 text-xs font-medium rounded-full ${getStatusBadgeColor(
+                      project.status
+                    )}`}
+                  >
                     {project.status}
                   </span>
                 </td>
