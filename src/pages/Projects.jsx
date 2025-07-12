@@ -186,7 +186,7 @@ const ProjectsPage = () => {
               </div>
             </div>
 
-            <div className="p-6 space-y-6">
+            <form className="p-6 space-y-6" onSubmit={handleSubmit}>
               {/* Project Title */}
               <div>
                 <label
@@ -433,7 +433,7 @@ const ProjectsPage = () => {
                   Submit Project
                 </button>
               </div>
-            </div>
+            </form>
           </div>
         </div>
       )}
