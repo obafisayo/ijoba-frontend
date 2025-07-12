@@ -131,7 +131,8 @@ const Sidebar = ({
               <NavLink
                 key={index}
                 to={item.link}
-                className="px-4 py-2 flex gap-2 rounded-md hover:bg-[#F0F2F5] cursor-pointer"
+                className={({isActive}) => `px-4 py-2 flex gap-2 rounded-md hover:bg-[#F0F2F5] cursor-pointer ${isActive?
+                `bg-[#F0F2F5]` : ``}`}
               >
                 <img src={item.icon} alt="dashboard" /> <p>{item.text}</p>
               </NavLink>
@@ -145,7 +146,8 @@ const Sidebar = ({
             <NavLink
               key={index}
               to={item.link}
-              className="px-4 py-2 flex gap-2 rounded-md hover:bg-[#F0F2F5] cursor-pointer"
+              className={({isActive}) => `px-4 py-2 flex gap-2 rounded-md hover:bg-[#F0F2F5] cursor-pointer ${isActive?
+                `bg-[#F0F2F5]` : ``}`}
             >
               <img src={item.icon} alt="dashboard" />
             </NavLink>

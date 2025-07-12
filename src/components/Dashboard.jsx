@@ -51,9 +51,7 @@ const Dashboard = () => {
 		<h3 className="px-8 py-2 font-bold text-black text-2xl flex items-center w-full">
           Recent Projects
         </h3>
-		<div className="">
-		  <ProjectTable />
-		</div>
+		<ProjectTable />
       </div>
     </div>
   );

@@ -2,37 +2,10 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import { PROJECTDETAILS, PROJECTS } from "../routes/Routeconstants";
 import { projects } from "../data/projectData";
+import { getStatusColor } from "../helpers/utils";
+import { ProgressBar } from "./ProgressBar";
 
 const ProjectTable = () => {
-  const getStatusBadgeColor = (status) => {
-    switch (status) {
-      case "Completed":
-        return "bg-green-100 text-green-800";
-      case "In Progress":
-        return "bg-blue-100 text-blue-800";
-      case "Planning":
-        return "bg-gray-100 text-gray-800";
-      default:
-        return "bg-gray-100 text-gray-800";
-    }
-  };
-
-  const ProgressBar = ({ percentage }) => {
-    return (
-      <div className="flex items-center gap-3">
-        <div className="w-24 bg-gray-200 rounded-full h-2">
-          <div
-            className="bg-gray-800 h-2 rounded-full transition-all duration-300"
-            style={{ width: `${percentage}%` }}
-          ></div>
-        </div>
-        <span className="text-sm font-medium text-gray-700 min-w-8">
-          {percentage}
-        </span>
-      </div>
-    );
-  };
-
   return (
     <div className="w-full max-w-4xl mx-auto p-6">
       <div className="bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden">
@@ -58,7 +31,7 @@ const ProjectTable = () => {
               <tr key={index} className="hover:bg-gray-50 transition-colors">
                 <td className="px-6 py-4 text-sm font-medium text-gray-900">
                   <NavLink to={`${PROJECTS}/${project.id}`}>
-                    {project.name}
+                    {project.title}
                   </NavLink>
                 </td>
                 <td className="px-6 py-4 text-sm text-gray-600">
@@ -66,15 +39,18 @@ const ProjectTable = () => {
                 </td>
                 <td className="px-6 py-4">
                   <span
-                    className={`inline-flex px-2 py-1 text-xs font-medium rounded-full ${getStatusBadgeColor(
+                    className={`inline-flex px-2 py-1 text-xs font-medium rounded-full ${getStatusColor(
                       project.status
                     )}`}
                   >
                     {project.status}
                   </span>
                 </td>
-                <td className="px-6 py-4">
+                <td className="px-6 py-4 flex items-center gap-3">
                   <ProgressBar percentage={project.completion} />
+                  <span className="text-sm font-medium text-gray-700 min-w-8">
+                    {project.completion}
+                  </span>
                 </td>
               </tr>
             ))}
