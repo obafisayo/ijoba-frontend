@@ -7,7 +7,7 @@ export const AdminLayout = () => {
   return (
     <main>
         <Navbar />
-        <div className="container">
+        <div className=" w-full">
             <Outlet />
         </div>
     </main>
