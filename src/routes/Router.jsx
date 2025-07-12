@@ -21,6 +21,8 @@ export const Router = () => {
                 { path: PROJECTS, element: <Projects /> },
                 { path: PROJECTDETAILS, element: <ProjectDetails /> },
                 { path: BUDGET, element: <Budget /> },
+                 { path: SIGNIN, element: <SignIn /> },
+                { path: SIGNUP, element: <SignUp /> },
                 { path: "*", element: <h1>Page Not Found</h1> },
             ],
         },
@@ -32,16 +34,7 @@ export const Router = () => {
                 { path: "*", element: <h1>Page Not Found</h1> },
             ],
         },
-        {
-            path: HOME,
-            element: <AdminDashboardLayout />,
-            children: [
-                { path: SIGNIN, element: <SignIn /> },
-                { path: SIGNUP, element: <SignUp /> },
-                { path: "*", element: <h1>Page Not Found</h1> },
-            ],
-        },
-        { path: "*", element: <h1>Page Not Found</h1>},
+
     ]
     return useRoutes(routes)
 }
