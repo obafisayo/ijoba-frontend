@@ -1,6 +1,6 @@
 // Constants
 export const SIDEBAR_MIN_WIDTH = 60;
-export const SIDEBAR_MAX_WIDTH = 300;
+export const SIDEBAR_MAX_WIDTH = 350;
 export const AI_SHA_WELCOME = "Hello! I'm Aisha, your AI Insurance Copilot. How can I assist you today?";
 
 // LocalStorage keys
