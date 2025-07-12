@@ -1,12 +1,15 @@
 import React from 'react';
 import { useRoutes } from "react-router-dom"
 import { AdminLayout } from "../layout/AdminLayout"
-import { AIRISDASHBOARD, HOME, PROJECTDETAILS, PROJECTS, BUDGET } from "./Routeconstants"
+import { AIRISDASHBOARD, HOME, PROJECTDETAILS, PROJECTS, BUDGET, SIGNIN, SIGNUP } from "./Routeconstants"
 import AirisDashboard from '../pages/AirisDashboard';
 import { AdminDashboardLayout } from '../layout/AdminDashboardLayour';
 import Projects from '../pages/Projects';
 import { ProjectDetails } from '../pages/ProjectDetails';
 import Budget from '../pages/Budget';
+import AirisLandingPage from '../pages/AirisLandingPage';
+import { SignIn } from '../pages/SignIn';
+import { SignUp } from '../pages/SignUp';
 
 export const Router = () => {
     const routes = [
@@ -14,16 +17,11 @@ export const Router = () => {
             path: HOME,
             element: <AdminLayout />,
             children: [
+                { path: HOME, element: <AirisLandingPage /> },
                 { path: PROJECTS, element: <Projects /> },
                 { path: PROJECTDETAILS, element: <ProjectDetails /> },
-                { path: "*", element: <h1>Page Not Found</h1> },
-            ],
-        },
-        {
-            path: HOME,
-            element: <AdminLayout />,
-            children: [
                 { path: BUDGET, element: <Budget /> },
+                { path: "*", element: <h1>Page Not Found</h1> },
             ],
         },
         {
@@ -31,6 +29,15 @@ export const Router = () => {
             element: <AdminDashboardLayout />,
             children: [
                 { path: AIRISDASHBOARD, element: <AirisDashboard /> },
+                { path: "*", element: <h1>Page Not Found</h1> },
+            ],
+        },
+        {
+            path: HOME,
+            element: <AdminDashboardLayout />,
+            children: [
+                { path: SIGNIN, element: <SignIn /> },
+                { path: SIGNUP, element: <SignUp /> },
                 { path: "*", element: <h1>Page Not Found</h1> },
             ],
         },
