@@ -1,7 +1,7 @@
 import React from 'react';
 import { useRoutes } from "react-router-dom"
 import { AdminLayout } from "../layout/AdminLayout"
-import { AIRISDASHBOARD, HOME, PROJECTDETAILS, PROJECTS, BUDGET, SIGNIN, SIGNUP, ABOUT, CONTACT, FEATURE } from "./Routeconstants"
+import { AIRISDASHBOARD, HOME, PROJECTDETAILS, PROJECTS, BUDGET, SIGNIN, SIGNUP, ABOUT, CONTACT, FEATURE, REPORTS } from "./Routeconstants"
 import AirisDashboard from '../pages/AirisDashboard';
 import { AdminDashboardLayout } from '../layout/AdminDashboardLayour';
 import Projects from '../pages/Projects';
@@ -13,6 +13,7 @@ import { SignUp } from '../pages/SignUp';
 import AirisFeaturesPage from '../pages/AirisFeaturesPage';
 import AirisContactPage from '../pages/AirisContactPage';
 import AirisAboutPage from '../pages/AirisAboutPage';
+import AirisReportsPage from '../pages/AirisReportsPage';
 
 export const Router = () => {
     const routes = [
@@ -29,6 +30,7 @@ export const Router = () => {
                 { path: BUDGET, element: <Budget /> },
                  { path: SIGNIN, element: <SignIn /> },
                 { path: SIGNUP, element: <SignUp /> },
+                { path: REPORTS, element: <AirisReportsPage /> },
                 { path: "*", element: <h1>Page Not Found</h1> },
             ],
         },

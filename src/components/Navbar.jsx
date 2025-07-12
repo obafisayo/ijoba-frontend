@@ -13,10 +13,9 @@ import {
   REPORTS,
   SIGNUP,
 } from "../routes/Routeconstants";
-import AiRISAPIClient from "../api/api";
 
 export const Navbar = () => {
-  const loginStatus = AiRISAPIClient.auth.isLoggedIn();
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
   return (
     <nav className="flex justify-between items-center py-4 px-10 border border-b-[#73777f30]">
       <NavLink to={HOME} className="cursor-pointer">
@@ -25,7 +24,8 @@ export const Navbar = () => {
         </figure>
       </NavLink>
 
-      {loginStatus ? (
+      {/* Swap menus: show dashboard/project/report/budget/avatar when not logged in, show about/features/contact/Get Started when logged in */}
+      {!isLoggedIn ? (
         <div className="flex items-center gap-10">
           <ul className="flex gap-6">
             <NavLink to={AIRISDASHBOARD}>
@@ -45,11 +45,11 @@ export const Navbar = () => {
               <li className=" hover:text-[#73777f] cursor-pointer ">Budget</li>
             </NavLink>
           </ul>
-          <div className="avatar cursor-pointer">
+          <NavLink to={SIGNUP} className="avatar cursor-pointer">
             <figure>
               <img src={ProfilePicture} alt="" />
             </figure>
-          </div>
+          </NavLink>
         </div>
       ) : (
         <div className="flex items-center gap-10">
