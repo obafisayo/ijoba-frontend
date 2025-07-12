@@ -13,9 +13,10 @@ import {
   REPORTS,
   SIGNUP,
 } from "../routes/Routeconstants";
+import AiRISAPIClient from "../api/api";
 
 export const Navbar = () => {
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const loginStatus = AiRISAPIClient.auth.isLoggedIn();
   return (
     <nav className="flex justify-between items-center py-4 px-10 border border-b-[#73777f30]">
       <NavLink to={HOME} className="cursor-pointer">
@@ -24,7 +25,7 @@ export const Navbar = () => {
         </figure>
       </NavLink>
 
-      {isLoggedIn ? (
+      {loginStatus ? (
         <div className="flex items-center gap-10">
           <ul className="flex gap-6">
             <NavLink to={AIRISDASHBOARD}>

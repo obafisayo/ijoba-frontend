@@ -1,7 +1,7 @@
 import React from 'react';
 import { useRoutes } from "react-router-dom"
 import { AdminLayout } from "../layout/AdminLayout"
-import { AIRISDASHBOARD, HOME, PROJECTDETAILS, PROJECTS, BUDGET, SIGNIN, SIGNUP } from "./Routeconstants"
+import { AIRISDASHBOARD, HOME, PROJECTDETAILS, PROJECTS, BUDGET, SIGNIN, SIGNUP, ABOUT, CONTACT, FEATURE } from "./Routeconstants"
 import AirisDashboard from '../pages/AirisDashboard';
 import { AdminDashboardLayout } from '../layout/AdminDashboardLayour';
 import Projects from '../pages/Projects';
@@ -10,6 +10,9 @@ import Budget from '../pages/Budget';
 import AirisLandingPage from '../pages/AirisLandingPage';
 import { SignIn } from '../pages/SignIn';
 import { SignUp } from '../pages/SignUp';
+import AirisFeaturesPage from '../pages/AirisFeaturesPage';
+import AirisContactPage from '../pages/AirisContactPage';
+import AirisAboutPage from '../pages/AirisAboutPage';
 
 export const Router = () => {
     const routes = [
@@ -18,6 +21,9 @@ export const Router = () => {
             element: <AdminLayout />,
             children: [
                 { path: HOME, element: <AirisLandingPage /> },
+                { path: ABOUT, element: <AirisAboutPage /> },
+                { path: CONTACT, element: <AirisContactPage /> },
+                { path: FEATURE, element: <AirisFeaturesPage /> },
                 { path: PROJECTS, element: <Projects /> },
                 { path: PROJECTDETAILS, element: <ProjectDetails /> },
                 { path: BUDGET, element: <Budget /> },
