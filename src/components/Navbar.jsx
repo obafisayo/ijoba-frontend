@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import ProfilePicture from "../assets/Profile icon.png";
 import textLogo from "../assets/AirisTextLogo.png";
 import { NavLink } from "react-router-dom";
@@ -17,6 +17,7 @@ import AiRISAPIClient from "../api/api";
 
 export const Navbar = () => {
   const loginStatus = AiRISAPIClient.auth.isLoggedIn();
+  console.log(loginStatus);
   return (
     <nav className="flex justify-between items-center py-4 px-10 border border-b-[#73777f30]">
       <NavLink to={HOME} className="cursor-pointer">
@@ -25,7 +26,7 @@ export const Navbar = () => {
         </figure>
       </NavLink>
 
-      {loginStatus ? (
+      {!loginStatus ? (
         <div className="flex items-center gap-10">
           <ul className="flex gap-6">
             <NavLink to={AIRISDASHBOARD}>

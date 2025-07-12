@@ -132,6 +132,7 @@ const AuthAPI = {
         };
       }
     } catch (e) {
+        console.error(e);
       console.log('Token is not JWT format, assuming valid');
     }
 
