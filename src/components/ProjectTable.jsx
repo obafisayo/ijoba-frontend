@@ -7,9 +7,9 @@ import { ProgressBar } from "./ProgressBar";
 
 const ProjectTable = () => {
   return (
-    <div className="w-full max-w-4xl mx-auto p-6">
-      <div className="bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden">
-        <table className="w-full">
+    <div className="px-4 py-3 @container">
+      <div className="flex overflow-hidden rounded-xl border border-[#dbe6e5] bg-white">
+        <table className="flex-1">
           <thead className="bg-gray-50 border-b-1 border-gray-200">
             <tr>
               <th className="px-6 py-4 text-left text-sm font-medium text-gray-700">

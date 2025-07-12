@@ -90,7 +90,7 @@ const Sidebar = ({
         color: "#000000",
         display: "flex",
         flexDirection: "column",
-        borderRight: "1px solid #222e3a",
+        borderRight: "1px ",
         transition: isResizing ? "none" : "width 0.2s",
         position: "relative",
         zIndex: 2,
